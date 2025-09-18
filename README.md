@@ -22,7 +22,7 @@ Easiest way to instrument the Infra monitoring component is to follow the wizard
 The only non-default option you should change is to enable the "Application receivers" option. 
 <img width="771" height="446" alt="image" src="https://github.com/user-attachments/assets/75bd087f-5279-4b38-ba4e-142e0e64a602" />
 
-Continue following the wizard until you get to step 5 that provides the helm command to deploy. We want to deploy as is, but add in this one transformation to prevent some high cardinality from a specific service. 
+Continue following the wizard until you get to step 5 that provides the helm command to deploy. We want to deploy as is, but add in this one transformation to prevent some high cardinality from a specific service. ([this is in the Otel Demo App's Otel Collector too](https://github.com/open-telemetry/opentelemetry-demo/blob/main/src/otel-collector/otelcol-config.yml#L145-L152), we are just making sure this config makes it into alloy). 
 ```
 applicationObservability:
   traces:
