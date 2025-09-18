@@ -57,7 +57,7 @@ applicationObservability:
 Take note of the OTLP/gRPC endpoint provided in step 6. 
 
 Finally - deploy the Helm chart with the modified values.
-
+```
 helm repo add grafana https://grafana.github.io/helm-charts &&
   helm repo update &&
   helm upgrade --install --atomic --timeout 300s grafana-k8s-monitoring grafana/k8s-monitoring \
