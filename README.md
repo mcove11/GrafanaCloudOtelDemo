@@ -69,3 +69,10 @@ Once the helm chart is deployed, it should start collecting Infra Metrics/Logs a
 
 ### 2. Application Observability 
 
+We just need to deploy the OTEL demo app now using the helm values supplied in this repo: 
+
+```
+helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+helm install my-otel-demo open-telemetry/opentelemetry-demo --values otelDemoValues.yaml
+```
+[Source](https://opentelemetry.io/docs/demo/kubernetes-deployment/#install-using-helm-recommended)
