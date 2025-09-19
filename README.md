@@ -1,18 +1,17 @@
-# Deploying the OpenTelemetry Demo app on Grafana Cloud 
-This repository is a guide how to deploy the [OpenTelemetry Demo App](https://github.com/open-telemetry/opentelemetry-demo?tab=readme-ov-file#-opentelemetry-demo) to send data to Grafana Cloud using the Kubernetes Monitoring Helm Chart to be the OpenTelemetry Collector. 
+# Deploying the OpenTelemetry Demo App on Grafana Cloud 
+This repository is a guide how to deploy the [OpenTelemetry Demo App](https://github.com/open-telemetry/opentelemetry-demo?tab=readme-ov-file#-opentelemetry-demo) to send data to Grafana Cloud using the [Kubernetes Monitoring Helm Chart](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/helm-chart-config/helm-chart/) to be the OpenTelemetry Collector. 
 
 The supplied [values.yaml](otelDemoValues.yaml) makes only a couple small changes from the one supplied with the Demo Application:
 
-1. Disables components from being deployed: 
- - Otel Collector
+1. Disables components from being deployed (Since all of these will be done by Alloy and Grafana Cloud): 
+- Otel Collector
 - Prometheus
 - Grafana
 - Jaeger
 - OpenSearch
 
-Since all of these will be done by Alloy and Grafana Cloud
 
-2. Updates the env variable OTEL_COLLECTOR_NAME value to grafana-k8s-monitoring-alloy-receiver.default.svc.cluster.local which is the default service endpoint for Alloy's OTLP Receiver in K8s.
+2. Updates the env variable OTEL_COLLECTOR_NAME value to ```grafana-k8s-monitoring-alloy-receiver.default.svc.cluster.local``` which is the default service endpoint for Alloy's OTLP Receiver in K8s.
 
 ## Steps to Deploy 
 
