@@ -1,7 +1,7 @@
 ## Deploying the OpenTelemetry Demo app on Grafana Cloud 
-This repository is a small guide how to deploy the https://github.com/open-telemetry/opentelemetry-demo?tab=readme-ov-file#-opentelemetry-demo app to send data to Grafana Cloud using the Kubernetes Monitoring Helm Chart to be the OpenTelemetry Collector. 
+This repository is a guide how to deploy the [OpenTelemetry Demo App](https://github.com/open-telemetry/opentelemetry-demo?tab=readme-ov-file#-opentelemetry-demo) to send data to Grafana Cloud using the Kubernetes Monitoring Helm Chart to be the OpenTelemetry Collector. 
 
-The supplied values.yaml otelDemoValues.yaml makes only a couple small changes:
+The supplied [values.yaml](otelDemoValues.yaml) makes only a couple small changes:
 
 1. Disables components from being deployed: 
  - Otel Collector
